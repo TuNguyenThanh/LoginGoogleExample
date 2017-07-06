@@ -5,8 +5,10 @@ import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin'
 
 export default class App extends Component {
   componentWillMount() {
+    GoogleSignin.hasPlayServices({ autoResolve: true });
     GoogleSignin.configure({
-      iosClientId: '617324734115-od9b4l2mf95331gg9m4u0a4gggq0fpjo.apps.googleusercontent.com'
+      iosClientId: '617324734115-od9b4l2mf95331gg9m4u0a4gggq0fpjo.apps.googleusercontent.com',
+      webClientId: '617324734115-pif2nvtbd6ov2srpupq2db3ghgqmsma6.apps.googleusercontent.com'
     })
   }
 
